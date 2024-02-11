@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/htmx.org@1.6.0/dist/htmx.min.js"></script>
   </head>
   <body>
-    <form hx-post="/.netlify/functions/expressFunction/register" hx-target="#result" hx-swap="outerHTML">
+    <form hx-post="https://mockup-api.netlify.app/.netlify/functions/expressFunction/register" hx-target="#result" hx-swap="outerHTML">
       <input type="text" name="name" placeholder="Username" />
       <input type="email" name="email" placeholder="Email" />
       <button type="submit">Register</button>
