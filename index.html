@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>htmx API Example</title>
+    <script src="https://unpkg.com/htmx.org@1.6.0/dist/htmx.min.js"></script>
+  </head>
+  <body>
+    Triggering an API request on page load
+    <button
+      hx-get="https://mockup-api.netlify.app/.netlify/functions/expressFunction"
+      hx-target="#todo"
+      hx-swap="innerHTML"
+    >
+      Fetch
+    </button>
+
+    <!-- Displaying the result of the API request -->
+    <div id="todo"></div>
+
+    <hr />
+
+    <button
+      hx-get="https://mockup-api.netlify.app/.netlify/functions/expressFunction/random-number"
+      hx-target="#random"
+      hx-swap="innerHTML"
+    >
+      Random number
+    </button>
+    <div id="random"></div>
+  </body>
+</html>
